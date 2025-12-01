@@ -40,6 +40,8 @@ import androidx.core.content.FileProvider
 import androidx.navigation.NavController
 import com.techtool.giftsuggester.GiftSuggesterViewModel
 import com.techtool.giftsuggester.R
+import com.techtool.giftsuggester.ads.AdUnitIds
+import com.techtool.giftsuggester.ads.BannerAdView
 import com.techtool.giftsuggester.navigation.NavigationItem
 import java.io.File
 import java.text.SimpleDateFormat
@@ -167,6 +169,14 @@ fun ScanScreen(navController: NavController, viewModel: GiftSuggesterViewModel) 
                 fontSize = 16.sp,
                 fontFamily = kanitRegular,
                 textAlign = TextAlign.Center
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Banner Ad
+            BannerAdView(
+                adUnitId = AdUnitIds.BANNER_SCAN_SCREEN,
+                modifier = Modifier.fillMaxWidth()
             )
 
             Spacer(modifier = Modifier.height(24.dp))

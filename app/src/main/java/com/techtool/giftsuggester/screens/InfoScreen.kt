@@ -24,6 +24,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.techtool.giftsuggester.R
+import com.techtool.giftsuggester.ads.AdUnitIds
+import com.techtool.giftsuggester.ads.BannerAdView
 import com.techtool.giftsuggester.navigation.NavigationItem
 
 @Composable
@@ -94,7 +96,15 @@ fun InfoScreen(navController: NavController) {
                 textAlign = TextAlign.Center
             )
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Banner Ad
+            BannerAdView(
+                adUnitId = AdUnitIds.BANNER_INFO_SCREEN,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
 
             // Description Card
             Card(
